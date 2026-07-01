@@ -1,9 +1,9 @@
 # Introduction to the Chaste C++ interface
 
-This repository was created for the [2023 Chaste workshop in Oxford](https://chaste.github.io/workshops/2023-09-11/) and then adapted for the 2025 Nottingham workshop.
-It introduces some simple examples of vertex model simulations, and then examples of how simulations can be customised by writing new C++ classes.
+This repository was created for the [2023 Chaste workshop in Oxford](https://chaste.github.io/workshops/2023-09-11/), adapted for the 2025 Nottingham workshop and now adapted again for the 2026 Sheffield workshop.
+It introduces some simple examples of vertex model simulations in C++, and then shows how simulations can be customised by writing new C++ classes within an example user project.
 
-## Structure
+## User Project Structure
 
 The simulations are found in the following test suite:
 - [test/TestCustomVertexSimulations.hpp](./test/TestCustomVertexSimulations.hpp)
@@ -19,7 +19,7 @@ The custom Chaste classes are defined in the following files:
 
 * Instead of these options, 'User Projects' allow you to use Chaste source code and have the benefit of using the Chaste build/testing framework, by putting User Projects under the projects folder. User Projects work exactly like new Chaste modules (`global`, `heart`, `cell_based`, etc.) and can depend on any of the Chaste modules (or indeed other User Projects). We tend to supply User Projects to accompany and reproduce research articles.
 
-* Instructions on how to create your own User Project from a 'template' project can also be found [here](https://chaste.cs.ox.ac.uk/trac/wiki/ChasteGuides/UserProjects). Alternatively, if you're using Chaste via Docker, you can run the provided script `new_project.sh` (in the `scripts` directory) and pass the name that you want to call your project e.g. `new_project.sh my_chaste_proj`.
+* Instructions on how to create your own User Project from a 'template' project can also be found [here](https://chaste.github.io/docs/user-guides/user-projects/). Alternatively, if you're using Chaste via Docker, you can run the provided script `new_project.sh` (in the `scripts` directory) and pass the name that you want to call your project e.g. `new_project.sh my_chaste_proj`. For the first few stages of this tutorial, you do not need to create your own user project, as the initial setup has already been done for you.
 
 * ⚠️ When you create a new user project, make sure you run the [setup_project.py](https://github.com/Chaste/template_project/blob/main/setup_project.py) script to ensure it relies on the correct Chaste libraries.
 
@@ -45,15 +45,15 @@ The custom Chaste classes are defined in the following files:
 - Note how the various classes in the `src` directory inherit from the base Chaste library classes.
 - Set up the workshop user project
   - From your ubuntu terminal (for windows, linux/macosx use native terminal), navigate into your Chaste directory, then the projects directory using the command `cd projects`
-  - Clone this repository into the `projects` directory using the command `git clone https://github.com/Chaste/IntroToChasteCpp2025.git`
+  - Clone this repository into the `projects` directory using the command `git clone https://github.com/Chaste/IntroToChasteCpp2026.git`
   - Navigate back to your `build` directory
-  - Configure cmake to build your project using `cmake ../src -DChaste_ENABLE_project_IntroToChasteCpp2025=ON -DChaste_ENABLE_project_IntroToChasteCpp2025_TESTING=ON` from the build directory
-  - Build the project! `make project_IntroToChasteCpp2025`
+  - Configure cmake to build your project using `cmake ../src -DChaste_ENABLE_project_IntroToChasteCpp2026=ON -DChaste_ENABLE_project_IntroToChasteCpp2026_TESTING=ON` from the build directory
+  - Build the project! `make project_IntroToChasteCpp2026`
 
 ### 2. Run the test suite
 
 - Read through the code in [test/TestCustomVertexSimulations.hpp](./test/TestCustomVertexSimulations.hpp) and make sure you undersand what it is doing.
-- Compile and run the test suite in [test/TestCustomVertexSimulations.hpp](./test/TestCustomVertexSimulations.hpp). If you followed the previous instructions, the tests should be built already. You will need to re-run `make project_IntroToChasteCpp2025` each time you make changes. To run the tests, use the command `ctest -V -R TestCustomVertexSimulations`
+- Compile and run the test suite in [test/TestCustomVertexSimulations.hpp](./test/TestCustomVertexSimulations.hpp). If you followed the previous instructions, the tests should be built already. You will need to re-run `make project_IntroToChasteCpp2026` each time you make changes. To run the tests, use the command `ctest -V -R TestCustomVertexSimulations`
 - Open the output in ParaView and see what each simulation has produced.
   - Download the output files from the `output` directory in vscode
   - Follow the instructions from the slides to view the outputs
