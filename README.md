@@ -54,6 +54,7 @@ The custom Chaste classes are defined in the following files:
 
 - Read through the code in [test/TestCustomVertexSimulations.hpp](./test/TestCustomVertexSimulations.hpp) and make sure you undersand what it is doing.
 - Compile and run the test suite in [test/TestCustomVertexSimulations.hpp](./test/TestCustomVertexSimulations.hpp). If you followed the previous instructions, the tests should be built already. You will need to re-run `make project_IntroToChasteCpp2026` each time you make changes. To run the tests, use the command `ctest -V -R TestCustomVertexSimulations`
+- Download the output from the codespace. Unfortunately codespaces only allow you to download files, not folders, so we first need to zip the output folder: `zip -r output.zip output`. You should now be able to right click on the `output.zip` file and download it.
 - Open the output in ParaView and see what each simulation has produced.
   - Download the output files from the `output` directory in vscode
   - Follow the instructions from the slides to view the outputs
