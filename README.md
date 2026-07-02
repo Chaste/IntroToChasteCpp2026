@@ -48,7 +48,7 @@ The custom Chaste classes are defined in the following files:
   - Clone this repository into the `projects` directory using the command `git clone https://github.com/Chaste/IntroToChasteCpp2026.git`
   - Navigate back to your `build` directory
   - Configure cmake to build your project using `cmake ../src -DChaste_ENABLE_project_IntroToChasteCpp2026=ON -DChaste_ENABLE_project_IntroToChasteCpp2026_TESTING=ON` from the build directory
-  - Build the project! `make project_IntroToChasteCpp2026`
+  - Build the project! `make project_IntroToChasteCpp2026 -j 16`
 
 ### 2. Run the test suite
 
